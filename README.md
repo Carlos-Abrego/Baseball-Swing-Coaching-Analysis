@@ -1,56 +1,67 @@
-# Baseball-Swing-Coaching-Analysis
-Overview
+# Baseball Swing Coaching Analysis
 
-This Jupyter Notebook analyzes high-resolution baseball swing data from five batters with the goal of translating biomechanical motion data into actionable insights for hitting coaches. The analysis focuses on identifying key swing events and extracting intuitive performance metrics related to timing, power generation, and contact quality.
+## Overview
+As a Data Analyst for a professional baseball team, this project analyzes high-resolution swing data from five batters. The dataset includes detailed time-series measurements of joint positions, joint angles, angular velocities, bat metrics, and key swing events such as ball release and contact.
 
-What This Notebook Does
+The goal of this analysis is to process raw biomechanical data, identify key swing events, and calculate meaningful metrics that can inform hitting coaches about player performance. By translating complex motion data into intuitive metrics, this project bridges the gap between data science and on-field coaching without requiring a technical biomechanics background.
 
-Loads and cleans raw time-series swing data
+---
 
-Identifies three key swing events:
+## Project Objectives
+- Clean and standardize raw swing-tracking data  
+- Identify key events within each batter’s swing  
+- Extract coach-relevant performance metrics  
+- Present results in a clear, interpretable format  
 
-Ball Release
+---
 
-Maximum Bat Speed
+## Key Swing Events
 
-End of Swing
+### Ball Release
+This event serves as the starting point for analyzing the swing. A well-timed swing begins in response to the pitcher’s release, making this phase critical for understanding swing timing. Metrics captured here help coaches evaluate initial positioning and preparation.
 
-Calculates coach-relevant metrics at each event, including:
+### Maximum Bat Speed
+This event captures the moment of peak bat speed during the swing. Maximum bat speed is strongly associated with power generation and overall swing effectiveness.
 
-Contact
+### End of Swing
+The end of the swing is defined as the slowest bat speed following peak velocity. This phase provides insight into follow-through quality and energy transfer efficiency.
 
-Sweet spot hit
+---
 
-Stride length
+## Metrics Calculated
 
-Torso-pelvis rotational ratio
+### Contact
+Indicates whether the batter made contact with the ball. This fundamental metric helps assess swing timing and alignment with the pitch.
 
-Outputs a consolidated table summarizing results across all batters
+### Sweet Spot Hit
+Identifies whether contact occurred near the bat’s sweet spot. Not all contact is equal, and this metric helps distinguish optimal contact from less efficient hits.
 
-Why It Matters
+### Stride Length
+Measures the distance between the batter’s left and right ankles. Stride length is linked to balance, stability, and lower-body power generation.
 
-Biomechanical swing data is often difficult to interpret outside of technical or research settings. This notebook demonstrates how a data analyst can bridge the gap between raw motion capture data and on-field coaching decisions, enabling coaches to quickly identify mechanical strengths, inefficiencies, and areas for improvement.
+### Torso–Pelvis Ratio
+Evaluates the coordination between upper- and lower-body rotation by comparing torso and pelvis angular velocities. Higher ratios near peak bat speed indicate effective kinetic sequencing.
 
-Tools Used
+---
 
-Python
+## Analysis Output
+The final output is a consolidated table summarizing each batter’s metrics at three swing events:
+- Ball Release  
+- Maximum Bat Speed  
+- End of Swing  
 
-Pandas
+This structure enables quick comparison across batters and swing phases while remaining accessible to coaches and performance staff.
 
-NumPy
+---
 
-Jupyter Notebook
+## Tools & Technologies
+- Python  
+- Pandas  
+- NumPy  
+- Jupyter Notebook  
 
-Intended Audience
+---
 
-Baseball operations & analytics teams
+## Conclusion
+This project demonstrates how high-resolution swing-tracking data can be transformed into actionable coaching insights. By focusing on key swing events and intuitive metrics, the analysis supports player development, mechanical refinement, and performance optimization, highlighting the value of data analytics in baseball operations.
 
-Player development and performance staff
-
-Coaches seeking data-supported feedback without deep biomechanics expertise
-
-Notes
-
-Data used in this project is anonymized and structured for analytical demonstration purposes.
-
-Metric definitions and interpretations are explained directly within the notebook for clarity.
